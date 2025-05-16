@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Icon Generator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .instructions {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f0f0f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h2>Tabby Group İkon Oluşturucu</h2>
+        <p>Bu sayfayı kullanarak ikonu doğrudan oluşturabilirsiniz. Aşağıdaki 3 ikonu sağ tıklayıp "Resmi Farklı Kaydet" seçeneği ile <b>icon16.png</b>, <b>icon48.png</b> ve <b>icon128.png</b> olarak kaydedin.</p>
+    </div>
+    
+    <div>
+        <canvas id="canvas16" width="16" height="16"></canvas><br>
+        <b>16x16 icon</b> - Sağ tıklayıp "icon16.png" olarak kaydedin
+    </div>
+    
+    <div>
+        <canvas id="canvas48" width="48" height="48"></canvas><br>
+        <b>48x48 icon</b> - Sağ tıklayıp "icon48.png" olarak kaydedin
+    </div>
+    
+    <div>
+        <canvas id="canvas128" width="128" height="128"></canvas><br>
+        <b>128x128 icon</b> - Sağ tıklayıp "icon128.png" olarak kaydedin
+    </div>
+
+    <script>
+        // SVG içeriğini bir Data URL'e dönüştür
+        const svgString = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background -->
+  <rect x="8" y="18" width="112" height="92" rx="8" ry="8" fill="#4285f4" />
+  
+  <!-- Tab shapes -->
+  <rect x="16" y="10" width="30" height="20" rx="6" ry="6" fill="#fbbc05" />
+  <rect x="54" y="10" width="30" height="20" rx="6" ry="6" fill="#34a853" />
+  <rect x="92" y="10" width="20" height="20" rx="6" ry="6" fill="#ea4335" />
+  
+  <!-- Tab content lines -->
+  <rect x="22" y="44" width="84" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="56" width="74" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="68" width="64" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="80" width="84" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="92" width="54" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+</svg>`;
+        
+        const svgBlob = new Blob([svgString], { type: 'image/svg+xml' });
+        const svgUrl = URL.createObjectURL(svgBlob);
+        
+        // Her boyut için ikonu çiz
+        function drawIcon(canvasId, size) {
+            const canvas = document.getElementById(canvasId);
+            const ctx = canvas.getContext('2d');
+            
+            const img = new Image();
+            img.onload = function() {
+                ctx.clearRect(0, 0, size, size);
+                ctx.drawImage(img, 0, 0, size, size);
+            };
+            img.src = svgUrl;
+        }
+        
+        // Tüm ikonları çiz
+        drawIcon('canvas16', 16);
+        drawIcon('canvas48', 48);
+        drawIcon('canvas128', 128);
+    </script>
+</body>
+</html> 

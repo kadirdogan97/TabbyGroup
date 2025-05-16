@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- Background -->
+  <rect x="8" y="18" width="112" height="92" rx="8" ry="8" fill="#4285f4" />
+  
+  <!-- Tab shapes -->
+  <rect x="16" y="10" width="30" height="20" rx="6" ry="6" fill="#fbbc05" />
+  <rect x="54" y="10" width="30" height="20" rx="6" ry="6" fill="#34a853" />
+  <rect x="92" y="10" width="20" height="20" rx="6" ry="6" fill="#ea4335" />
+  
+  <!-- Tab content lines -->
+  <rect x="22" y="44" width="84" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="56" width="74" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="68" width="64" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="80" width="84" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+  <rect x="22" y="92" width="54" height="4" rx="2" ry="2" fill="#ffffff" opacity="0.8" />
+</svg> 
