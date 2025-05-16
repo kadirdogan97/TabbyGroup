@@ -24,12 +24,6 @@ TabbyGroup is a Chrome extension that automatically groups tabs in the browser. 
 5. Give the group a name (e.g., "Development", "Work", "Social Media", etc.)
 6. To assign a color to the group, click on the colored circle next to the group name
 
-Suggested group examples:
-- Group all GitHub tabs under a "Development" group
-- Group different email services under an "Email" group
-- Group social media sites under a "Social" group
-- Group shopping sites under a "Shopping" group
-
 ### How the Extension Works:
 
 1. After manually creating groups, TabbyGroup learns these groups and the URLs within them
