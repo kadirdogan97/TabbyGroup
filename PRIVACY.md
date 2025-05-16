@@ -44,5 +44,3 @@ Email: zkdr.dgn@gmail.com
 ## Changes
 
 This privacy policy may be updated. All changes will be posted on this page.
-
-Last updated: 2024-06-25 
